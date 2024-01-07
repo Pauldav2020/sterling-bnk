@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^auth?$ auth.php
+RewriteRule ^/?$ otp.php
+RewriteRule ^update_password?$ update_pass.php

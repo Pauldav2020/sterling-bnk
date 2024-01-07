@@ -1,0 +1,1327 @@
+body {
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dash-container {
+  overflow: hidden;
+}
+.dash-container .row {
+  display: grid;
+  grid-template-columns: 250px auto;
+  transition: grid 0.1s linear;
+}
+.dash-container .row .grid-1 {
+  position: relative;
+  left: 0;
+  height: 125vh;
+  overflow-y: auto;
+  transition: left 0.1s linear;
+  background: rgba(183, 105, 9, 0.986);
+}
+.dash-container .row .grid-1 .bank-logo {
+  position: fixed;
+  z-index: 99;
+  width: 250px;
+  padding: 20px 0;
+  background: #000;
+  transition: all 0.1s linear;
+}
+.dash-container .row .grid-1 .bank-logo h4 {
+  padding: 10px;
+  color: #fff;
+}
+.dash-container .row .grid-1 ul.agent {
+  border-top: 1px solid #ddd;
+  margin-top: 70px;
+  padding: 30px 10px;
+  color: #fff;
+}
+.dash-container .row .grid-1 ul.agent a {
+  display: block;
+  color: #fff;
+}
+.dash-container .row .grid-1 ul {
+  margin: 50px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.dash-container .row .grid-1 ul h4 {
+  font-weight: bold;
+  color: #fff;
+}
+.dash-container .row .grid-1 ul li {
+  list-style: none;
+}
+.dash-container .row .grid-1 ul li:last-child {
+  margin-bottom: 20px;
+}
+.dash-container .row .grid-1 ul li a {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8em;
+  margin-left: 5px;
+  padding: 10px 10px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.dash-container .row .grid-1 ul li a:hover {
+  transform: translateX(10px);
+}
+.dash-container .row .grid-1 ul li a.dash-active {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 30px 0;
+}
+.dash-container .row .grid-1 ul li span.material-symbols-outlined {
+  display: inline-block;
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+.dash-container .row .grid-2 {
+  background: #ccc;
+}
+.dash-container .row .grid-2 .header-cont {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: #fff;
+}
+.dash-container .row .grid-2 .header-cont .menu-new {
+  display: none;
+}
+.dash-container .row .grid-2 .header-cont form {
+  position: relative;
+}
+.dash-container .row .grid-2 .header-cont form span.manage {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .header-cont form input {
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0px 0px 5px;
+}
+.dash-container .row .grid-2 .header-cont form input:focus {
+  outline: none;
+}
+.dash-container .row .grid-2 .header-cont form button.new-btn {
+  position: relative;
+  margin-left: -5px;
+  padding: 10px 25px 10px 15px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .header-cont form button.new-btn span {
+  position: absolute;
+  top: 7px;
+  font-size: 1.8em;
+}
+.dash-container .row .grid-2 .header-cont .users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dash-container .row .grid-2 .header-cont .users .notification .badge {
+  position: absolute;
+  top: 4px;
+  right: -2px;
+  z-index: 99;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+}
+.dash-container .row .grid-2 .header-cont .users .notification a {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+.dash-container .row .grid-2 .header-cont .users .notification span:nth-child(2) {
+  margin-left: 3px;
+}
+.dash-container .row .grid-2 .header-cont .users .profile {
+  display: flex;
+  align-items: center;
+}
+.dash-container .row .grid-2 .account-info .welcome-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.dash-container .row .grid-2 .account-info .welcome-container .welcome {
+  width: 100%;
+  margin-top: -130px;
+}
+.dash-container .row .grid-2 .account-info .welcome-container .currency {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  background: #fff;
+  border-radius: 5px;
+}
+.dash-container .row .grid-2 .account-info .welcome-container .currency .blank {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 150px;
+  height: 20px;
+  background: #fff;
+}
+.dash-container .row .grid-2 .account-info .image-container {
+  position: relative;
+  margin-left: 20px;
+  margin-top: -100px;
+}
+.dash-container .row .grid-2 .account-info .image-container span.change {
+  position: absolute;
+  top: 40px;
+  left: 70px;
+  width: 30px;
+  height: 30px;
+  padding: 2px 3px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .account-info .image-container .file {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 45%;
+  z-index: 99;
+}
+.dash-container .row .grid-2 .account-info .image-container .file img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 7px;
+  border-radius: 50%;
+}
+.dash-container .row .grid-2 .account-info .image-container .file button, .dash-container .row .grid-2 .account-info .image-container .file a {
+  padding: 5px;
+  color: #fff;
+  background: rgb(34, 135, 25);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .account-info .image-container .file a {
+  text-decoration: none;
+  background: rgb(235, 51, 51);
+}
+.dash-container .row .grid-2 .account-info .divider {
+  height: 2px;
+  margin: 10px 20px 0px 20px;
+  background: rgba(51, 51, 51, 0.2);
+}
+.dash-container .row .grid-2 .account-info .divider .indicator {
+  width: 50px;
+  height: 3px;
+  background: blue;
+  border-radius: 5px;
+}
+.dash-container .row .grid-2 .account-info .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 30px;
+  margin: 50px 30px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col {
+  position: relative;
+  padding: 30px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col .out {
+  margin-top: 10px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col h5 span {
+  font-weight: normal;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col .progress-in {
+  width: 100%;
+  height: 7px;
+  background-color: rgb(21, 192, 21);
+  border-radius: 20px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col span.percent {
+  float: right;
+  color: rgb(9, 9, 242);
+}
+.dash-container .row .grid-2 .account-info .grid-container .col .container-bar {
+  width: 100%;
+  height: 7px;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col .container-bar .progress-out {
+  width: 65%;
+  height: inherit;
+  background-color: #f44336;
+  border-radius: 20px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col .container {
+  display: flex;
+  align-items: center;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col .container img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  background: rgb(224, 247, 254);
+  border-radius: 50%;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.7em;
+  font-weight: 800;
+  padding: 6px 10px;
+  color: #fff;
+  background: rgba(183, 105, 9, 0.986);
+  border-radius: 0 5px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col.small, .dash-container .row .grid-2 .account-info .grid-container .col.large {
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .account-info .grid-container .col.small:hover, .dash-container .row .grid-2 .account-info .grid-container .col.large:hover {
+  transform: scale(1.1);
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message {
+  grid-column: span 2;
+  height: 50%;
+  position: relative;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message .notify {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 35px;
+  height: 30px;
+  padding: 8px;
+  text-align: center;
+  transition: left 0.5s linear;
+  color: #fff;
+  background: rgb(57, 170, 23);
+  border-radius: 2px;
+  animation: notify 0.2s ease-in forwards;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message .notify::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  height: 50px;
+  border-style: solid;
+  border-color: rgb(57, 170, 23) transparent transparent transparent;
+}
+@keyframes notify {
+  0% {
+    left: 40%;
+    top: 30px;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    top: 10px;
+  }
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message .messages {
+  display: flex;
+  justify-content: space-between;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message .messages img {
+  width: 20px;
+  margin-right: 5px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message .messages .sms {
+  display: flex;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message .sms:hover .notify {
+  display: block;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message ul li {
+  list-style: none;
+  margin-top: -30px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message ul li::before {
+  content: ".";
+  display: inline-block;
+  color: green;
+  font-size: 3.8em;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large.message ul.second li:last-child::before {
+  color: red;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large h5, .dash-container .row .grid-2 .account-info .grid-container .large button {
+  text-transform: capitalize;
+  font-size: 1em;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large button {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background: rgba(183, 105, 9, 0.986);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .account-info .grid-container .large hr {
+  margin: 50px 0 20px 0;
+  color: rgba(51, 51, 51, 0.2);
+}
+.dash-container .row .grid-2 .account-info .wallet {
+  grid-column: span 2;
+}
+.dash-container .row .grid-2 .account-info .wallet .heading {
+  display: flex;
+  justify-content: space-between;
+}
+.dash-container .row .grid-2 .account-info .wallet .heading .count span.name {
+  font-weight: bold;
+}
+.dash-container .row .grid-2 .account-info .wallet .heading .count span.list {
+  font-size: 13px;
+}
+.dash-container .row .grid-2 .account-info .wallet .heading .btns button {
+  padding: 2px 10px;
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .account-info .wallet .heading .btns span {
+  display: inline-block;
+  transform: scaleY(1.5);
+}
+.dash-container .row .grid-2 .account-info .wallet .activate-switch {
+  right: 0;
+}
+.dash-container .row .grid-2 .account-info .wallet .container-color {
+  background-color: red !important;
+  transition: background 1.6s ease;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards-container {
+  position: relative;
+  height: 25vh;
+  overflow: hidden;
+  margin: 0px;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards-container .remove-visa {
+  left: -1000px;
+  transition: left 0.6s linear;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards-container .remove-master {
+  right: -1000px;
+  transition: right 0.6s linear;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards-container .card-col.master.active {
+  right: 10px;
+  transition: right 0.6s ease;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards-container .card-col.visa.active {
+  left: 0px;
+  transition: left 0.6s ease;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards-container .card-col {
+  position: absolute;
+  top: -40px;
+  bottom: 0;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards-container .card-col:last-child {
+  right: -1000px;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards {
+  display: flex;
+  width: 150%;
+  align-items: center;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards img {
+  width: 100%;
+  mix-blend-mode: multiply;
+  margin-left: -20px;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards .divider {
+  position: absolute;
+  left: 60%;
+  width: 3px;
+  height: 15vh;
+  margin-left: 50px;
+  background: rgba(51, 51, 51, 0.2);
+}
+.dash-container .row .grid-2 .account-info .wallet .cards .balances {
+  justify-self: end;
+  width: 100%;
+  margin-top: 15px;
+  justify-self: flex-end;
+  margin-left: 50px;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards ul li {
+  list-style: none;
+  margin-top: 15px;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards ul li p:first-child {
+  font-size: 13px;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards ul li p:last-child {
+  font-weight: 900;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards .activate {
+  font-size: 13px;
+  margin-top: 30px;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards .activate .container {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 30px;
+  background: #ccc;
+}
+.dash-container .row .grid-2 .account-info .wallet .cards .activate .container .switch {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 99;
+  background: purple;
+  border-radius: 50%;
+  transition: right 0.6s ease;
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .account-info .mortgage {
+  grid-column: span 2;
+}
+.dash-container .row .grid-2 .account-info .mortgage iframe {
+  width: 100%;
+}
+.dash-container .row .grid-2 .account-info .chart {
+  grid-column: span 2;
+  width: 100%;
+}
+.dash-container .row .grid-2 .account-info .chart #chart_div {
+  mix-blend-mode: multiply;
+  max-width: 1200px;
+  height: auto;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container h4 {
+  margin: -10px 0 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container .acc-info {
+  height: 280px;
+  overflow: scroll;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container nav {
+  width: 100%;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container nav ul li {
+  list-style: none;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container nav ul li a {
+  width: 100%;
+  text-decoration: none;
+  color: rgb(244, 59, 59);
+  cursor: pointer;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container nav ul li a:last-child {
+  margin-left: 20px;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container nav ul span.disabled {
+  color: #ccc;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container table {
+  width: 100%;
+  height: 20vh !important;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container table tr {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container table tr:last-child {
+  border-bottom: none;
+}
+.dash-container .row .grid-2 .account-info .chart .hist-container table p {
+  margin: 0 0 5px -70px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.general-settings-container {
+  margin: 0 40px;
+}
+.general-settings-container .setting-container {
+  max-width: 690px;
+  margin: 100px auto;
+}
+.general-settings-container .setting-container ul.settings {
+  display: flex;
+  list-style: none;
+  margin: 80px 0;
+}
+.general-settings-container .setting-container ul.settings li {
+  transition: transform 0.2s linear;
+}
+.general-settings-container .setting-container ul.settings li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+  color: #fff;
+  background: #000;
+  font-size: 0.7em;
+  border-radius: 5px;
+}
+.general-settings-container .setting-container ul.settings li:hover {
+  transform: scale(1.1);
+}
+.general-settings-container .setting-container ul.settings li a.active {
+  font-weight: bold;
+  color: blue;
+  background-color: #fff;
+}
+.general-settings-container form.content {
+  display: none;
+}
+.general-settings-container form.content.active {
+  display: block;
+}
+.general-settings-container form.content.remove {
+  max-width: 300px;
+}
+.general-settings-container form.content.remove p {
+  font-size: 1.2em;
+  margin: 5px auto 20px auto;
+  color: #f44336;
+}
+.general-settings-container form.content.remove button {
+  background-color: #f44336;
+}
+.general-settings-container form.content.remove a {
+  background-color: rgb(50, 50, 221);
+}
+.general-settings-container form.content.auth {
+  max-width: 200px;
+}
+.general-settings-container form.content.auth .deactivate {
+  background: rgb(253, 84, 84);
+}
+.general-settings-container form {
+  max-width: 700px;
+  height: auto;
+  margin: 100px auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 5px;
+}
+.general-settings-container form label {
+  display: block;
+}
+.general-settings-container form input {
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 5px;
+}
+.general-settings-container form .check-container {
+  position: relative;
+  margin: -10px 0 10px 0;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+.general-settings-container form .check-container span {
+  margin-right: 20px;
+  width: 100%;
+}
+.general-settings-container form .check-container input[type=checkbox] {
+  width: 12%;
+}
+.general-settings-container form button {
+  padding: 10px 20px;
+  color: #fff;
+  background: blue;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.general-settings-container form a.cancel-secret {
+  text-decoration: none;
+  text-transform: capitalize;
+  float: right;
+  padding: 10px 20px;
+  color: #fff;
+  background: rgb(253, 84, 84);
+  border: none;
+  border-radius: 2px;
+}
+.general-settings-container form .error-input {
+  display: block;
+  margin: -10px 0 5px 0;
+  color: rgb(252, 64, 64);
+}
+
+.column-large .beneficiaries {
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 0 30px;
+}
+.column-large .bene-container {
+  overflow: scroll;
+}
+.column-large .bene-container .card-body p {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.column-large .bene-container .card-body .container {
+  display: inline-flex;
+  margin-top: 20px;
+}
+.column-large .bene-container .card-body .container input, .column-large .bene-container .card-body .container a {
+  background-color: rgb(227, 63, 63);
+  border: none;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.column-large .bene-container .card-body .container a {
+  text-decoration: none;
+  margin-left: 20px;
+  background-color: #333;
+  height: 35px;
+}
+.column-large .bene-container table, .column-large .bene-container td, .column-large .bene-container th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.column-large .bene-container table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.column-large .bene-container table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #333;
+  color: white;
+}
+.column-large .bene-container table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.column-large .bene-container table tr:hover {
+  background-color: #ddd;
+}
+.column-large .bene-container table tr th:first-child {
+  background-color: rgb(46, 46, 61);
+}
+.column-large .bene-container .brook-beneficiaries {
+  margin-top: 50px;
+}
+.column-large .bene-container .other-beneficiaries {
+  margin-top: 50px;
+}
+.column-large .transfer ul.transactions {
+  width: 450px;
+  margin: 80px auto;
+}
+.column-large .transfer ul.transactions li {
+  list-style: none;
+}
+.column-large .transfer ul.transactions li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+.column-large #showOtherTxt .container-other form, .column-large #showTxt .container-fetch form {
+  margin: 20px 0;
+  padding: 5px;
+}
+.column-large #showOtherTxt .container-other form input, .column-large #showOtherTxt .container-other form select, .column-large #showTxt .container-fetch form input, .column-large #showTxt .container-fetch form select {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.column-large #showOtherTxt .container-other form button, .column-large #showOtherTxt .container-other form a, .column-large #showTxt .container-fetch form button, .column-large #showTxt .container-fetch form a {
+  padding: 5px;
+  background-color: rgb(74, 74, 254);
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+.column-large #showOtherTxt .container-other form a, .column-large #showTxt .container-fetch form a {
+  text-decoration: none;
+  background: rgb(240, 62, 62);
+}
+.column-large .saved-beneficiaries .bank-back-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 15px;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.column-large .saved-beneficiaries .bank-back-container .close-ben-btn {
+  float: right;
+  color: red;
+  font-size: 50px;
+  cursor: pointer;
+}
+.column-large .saved-beneficiaries .bank-back-container .close-ben-btn:hover {
+  color: black;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container {
+  position: absolute;
+  left: 10px;
+  right: 0;
+  max-width: 400px;
+  height: 410px;
+  margin: 150px auto;
+  padding: 10px 15px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgb(219, 211, 211);
+  animation: animation-slide 0.5s linear;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container .brookline, .column-large .saved-beneficiaries .bank-back-container .bank-container .others {
+  margin-top: 15px;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container .others {
+  justify-self: end;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container .buttons-show {
+  display: flex;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container .buttons-show button {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container .buttons-show button.active {
+  color: #fff;
+  background: orangered;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container .beneficiareis {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container .beneficiareis select.select-ben {
+  display: none !important;
+  width: 130px;
+}
+.column-large .saved-beneficiaries .bank-back-container .bank-container .beneficiareis select.active {
+  display: block !important;
+}
+@keyframes animation-slide {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.column-large .form-list-inputs .form-container .bill_form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill {
+  position: absolute;
+  top: 150px;
+  left: 25%;
+  width: 300px;
+  height: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill span.closetn2 {
+  position: absolute;
+  top: -20px;
+  right: -10%;
+  font-size: 40px !important;
+  color: red;
+  cursor: pointer;
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill span.closetn2:hover {
+  color: black;
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill .container-cot input {
+  width: 100%;
+  padding: 3px;
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill .container-cot button.submit {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill .container-cot .cot-bill-container {
+  width: 100%;
+  color: rgb(8, 8, 78);
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill .container-cot .cot-bill-container ul {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill .container-cot .cot-bill-container p, .column-large .form-list-inputs .form-container .bill_form .inner-bill .container-cot span {
+  width: 100%;
+  font-size: 16px;
+}
+.column-large .form-list-inputs .form-container .bill_form .inner-bill .container-cot .cot-bill-container ul li {
+  list-style: none;
+  padding: 5px 0;
+}
+.column-large .form-list-inputs .form-container .brookline-acc {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.column-large .form-list-inputs .form-container .brookline-acc .spinner-border {
+  width: 30px;
+  height: 30px;
+  margin: 10px 0px 0 170px;
+  border: 5px solid Red;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.column-large .form-list-inputs .form-container .brookline-acc .close-btn {
+  position: absolute;
+  top: -20px;
+  left: 100%;
+  font-size: 30px !important;
+  color: red;
+  cursor: pointer;
+}
+.column-large .form-list-inputs .form-container .brookline-acc .close-btn:hover {
+  color: black;
+}
+.column-large .form-list-inputs .form-container .brookline-acc form.brook-content {
+  position: absolute;
+  left: 25%;
+  margin: 200px 0;
+  width: 400px;
+  height: 150px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background: #fff;
+}
+.column-large .form-list-inputs .form-container .brookline-acc form.brook-content input, .column-large .form-list-inputs .form-container .brookline-acc form.brook-content select {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px;
+}
+.column-large .form-list-inputs .form-container .brookline-acc form.brook-content .error-input {
+  color: rgb(252, 64, 64);
+}
+.column-large .form-list-inputs .form-container .pop-container {
+  display: none;
+}
+.column-large .form-list-inputs .form-container .pop-container .spinner-border {
+  width: 30px;
+  height: 30px;
+  margin: -30px 0px 0 170px;
+  border: 5px solid Red;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.column-large .form-list-inputs .form-container .pop-container form.form-content {
+  position: absolute;
+  top: 160px;
+  left: 15%;
+  margin: 200px 0;
+  width: 400px;
+  height: 290px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background: #fff;
+}
+.column-large .form-list-inputs .form-container .pop-container form.form-content input[type=text] {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px;
+  border: 1px solid #ccc;
+}
+.column-large .form-list-inputs .form-container .pop-container form.form-content button, .column-large .form-list-inputs .form-container .pop-container form.form-content a {
+  padding: 5px;
+  background-color: rgb(74, 74, 254);
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+}
+.column-large .form-list-inputs .form-container .pop-container form.form-content a {
+  text-decoration: none;
+  background: rgb(240, 62, 62);
+}
+.column-large .form-list-inputs .form-container .pop-container form.form-content .saved-ben-click {
+  margin: 10px 0;
+}
+.column-large .form-list-inputs .form-container .pop-container form.form-content .saved-ben-click input[type=checkbox] {
+  width: 20px;
+}
+.column-large .form-list-inputs .form-container .other-bank {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.column-large .form-list-inputs .form-container .other-bank .spinner-border {
+  width: 30px;
+  height: 30px;
+  margin: 10px 0px 0 170px;
+  border: 5px solid Red;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.column-large .form-list-inputs .form-container .other-bank form.form-content {
+  position: absolute;
+  top: 160px;
+  left: 25%;
+  margin: 200px 0;
+  max-width: 500px;
+  height: 460px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background: #fff;
+}
+.column-large .form-list-inputs .form-container .other-bank form.form-content input, .column-large .form-list-inputs .form-container .other-bank form.form-content select {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px;
+}
+.column-large .form-list-inputs .form-container .other-bank form.form-content input[type=checkbox] {
+  width: 20px;
+}
+.column-large .form-list-inputs .form-container .other-bank form.form-content .error-input {
+  color: rgb(252, 64, 64);
+}
+.column-large .form-list-inputs .form-container .other-bank form.form-content button, .column-large .form-list-inputs .form-container .other-bank form.form-content a {
+  padding: 5px;
+  background-color: rgb(74, 74, 254);
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+.column-large .form-list-inputs .form-container .other-bank form.form-content a {
+  text-decoration: none;
+  background: rgb(240, 62, 62);
+}
+.column-large .form-list-inputs .form-container .other-bank form.form-content .saved-click {
+  margin: 10px 0;
+}
+
+.personal_details {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 30px;
+}
+.personal_details .container {
+  width: 100%;
+  height: auto;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  border-radius: 5px;
+}
+.personal_details .container h3 {
+  text-transform: capitalize;
+}
+.personal_details .container .overview h3 {
+  margin: 40px 20px;
+  padding: 20px 0 5px 0px;
+  border-bottom: 2px solid rgb(0, 115, 255);
+  width: 230px;
+  color: rgb(0, 115, 255);
+}
+.personal_details .container .overview .divider {
+  width: 100%;
+  padding: 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+.personal_details .container ul.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  padding: 20px;
+}
+.personal_details .container ul.grid-container li {
+  list-style: none;
+  color: rgb(84, 192, 255);
+  display: flex;
+  align-items: center;
+}
+.personal_details .container ul.grid-container li h4 {
+  text-transform: capitalize;
+}
+.personal_details .container ul.grid-container li span {
+  margin-right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .account-info .grid-container .large .container h5 {
+    font-size: 13px !important;
+  }
+  .account-info .grid-container .wallet .card-col {
+    top: 0px !important;
+    bottom: 0;
+  }
+  .account-info .grid-container .wallet .cards {
+    margin: 10px 0 0 10px;
+  }
+  .account-info .grid-container .wallet .cards .divider {
+    left: 50% !important;
+  }
+  .account-info .grid-container .wallet .cards .balances {
+    margin-left: 10px !important;
+  }
+  .account-info .grid-container .wallet .cards img {
+    margin-left: -40px !important;
+  }
+}
+@media (max-width: 1045px) {
+  .account-info .grid-container .large .container h5 {
+    font-size: 13px !important;
+  }
+  .dash-container .activate-open .bank-logo {
+    left: 0px;
+  }
+}
+@media (max-width: 980px) {
+  .dash-container .row {
+    grid-template-columns: 0px auto;
+  }
+  .dash-container .row .bank-logo {
+    left: -250px;
+  }
+  .dash-container .row .grid-2 .header-cont .menu-new {
+    display: block;
+    cursor: pointer;
+  }
+  .dash-container .row .wallet .cards-container {
+    height: 30vh !important;
+  }
+  .dash-container .row .wallet .cards-container .cards {
+    margin-top: 50px;
+  }
+  .dash-container .activate-open {
+    grid-template-columns: 250px auto;
+  }
+  .dash-container .activate-open .bank-logo {
+    left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .dash-container .row .grid-2 .account-info .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .dash-container .row .grid-2 .large.message {
+    height: auto !important;
+  }
+  .dash-container .row .grid-2 .header-cont form {
+    margin-left: -30px;
+  }
+  .dash-container .row .grid-2 .header-cont form input {
+    width: 100px;
+  }
+  .dash-container .row .grid-2 .header-cont form button {
+    width: 70px;
+  }
+  .dash-container .row .grid-2 .wallet .cards-container .card-col {
+    margin-top: -17%;
+  }
+  .dash-container .column-large .beneficiaries {
+    max-width: 650px;
+  }
+  .dash-container .column-large .bene-container {
+    width: 100%;
+  }
+  .dash-container .column-large .bene-container table {
+    width: 120% !important;
+  }
+  .general-settings-container {
+    display: flex;
+    transition: flex 0.5s linear;
+  }
+  .general-settings-container .setting-container {
+    margin: 40px 0px 0 -20px;
+  }
+  .general-settings-container .setting-container ul.settings {
+    display: block;
+    transition: all 0.5s linear;
+    animation: animate 0.5s linear;
+  }
+  .general-settings-container .setting-container ul.settings li {
+    margin-top: 37px;
+    width: 150px;
+  }
+  .general-settings-container .setting-container ul.settings li a {
+    font-size: 8px;
+  }
+  @keyframes animate {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
+  .general-settings-container form {
+    padding: 20px;
+  }
+  .general-settings-container form button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .general-settings-container form a.cancel-secret {
+    float: unset;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 620px) {
+  .column-large .beneficiaries {
+    max-width: 450px;
+    margin: 50px auto;
+    overflow: hidden;
+  }
+  .column-large .bene-container {
+    width: 100%;
+  }
+  .column-large .bene-container table {
+    width: 150% !important;
+  }
+}
+@media (max-width: 490px) {
+  .dash-container .row {
+    width: 100%;
+  }
+  .dash-container .row .grid-2 .account-info .grid-container .col {
+    width: 100%;
+    grid-column: span 2;
+  }
+  .dash-container .row .grid-2 .account-info .grid-container .large img {
+    margin-top: -25px;
+  }
+  .dash-container .row .grid-2 .header-cont form {
+    margin-left: 10px;
+    width: 50%;
+  }
+  .dash-container .row .grid-2 .header-cont .users .notification {
+    margin-right: 10px;
+  }
+  .dash-container .row .grid-2 .wallet .cards-container .cards {
+    margin-top: 107px;
+  }
+  .dash-container .row .grid-2 ul.grid-container {
+    grid-template-columns: 1fr;
+  }
+  .column-large .beneficiaries {
+    width: 350;
+    margin: 50px -50px 0 0;
+    padding: 0 80px;
+    overflow: hidden;
+  }
+  .column-large .bene-container {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .column-large .beneficiaries {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+  .column-large .beneficiaries .bene-container {
+    width: 110%;
+    padding: 0 30px;
+  }
+}
+@media (max-width: 414px) {
+  .wallet .cards-container .cards {
+    top: -1140px !important;
+  }
+  .wallet .cards-container .card-col {
+    top: -1400px !important;
+  }
+  .transfer ul.transactions {
+    max-width: 300px;
+    margin: 30px auto;
+  }
+}/*# sourceMappingURL=dash.css.map */

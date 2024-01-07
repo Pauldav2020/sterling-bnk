@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteRule ^dashboard?$ index.php
+RewriteRule ^personal_infos?$ personal_info.php
+RewriteRule ^acc_history?$ account_history.php
+RewriteRule ^tran_pin?$ transact_pin.php
+RewriteRule ^chat_us?$ chat.php
+RewriteRule ^settings?$ pass_update.php
+RewriteRule ^settin?$ setting.php
+RewriteRule ^saved-bene?$ beneficiaries.php
+RewriteRule ^manage-bene?$ manage_ben.php
+RewriteRule ^mortgage?$ morgage.php
+RewriteRule ^transfer?$ transfer.php
+RewriteRule ^statements?$ statement.php

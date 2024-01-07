@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="typer">
+    <p class="show"></p>
+
+    <script>
+        const typer = document.querySelector("#typer")
+        const showType = document.querySelector(".show");
+
+        typer.onkeypress = function(){
+            showType.textContent = typer.value;
+        }
+    </script>
+</body>
+</html>

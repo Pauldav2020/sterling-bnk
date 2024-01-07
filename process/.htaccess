@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^update_password?$ update_pass.php
+RewriteRule ^/?$ otp.php

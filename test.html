@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" name="upload" id="">
+    <img src="" alt="" id="preview">
+
+    <script>
+        const upload = document.querySelector('input')
+        const preview =   document.getElementById('preview')
+
+        class UploadPhoto{
+            constructor(preview, input){
+                this.preview = preview
+                this.input = input
+            }
+
+            uploadFunc(e){
+                const img = e.target.files[0]
+                const reader = new FileReader()
+                console.log('Uploading', this.preview)
+    
+                reader.onload = () => {
+                    this.preview.src = reader.result
+                }
+               
+
+                reader.readAsDataURL(img)
+            }
+        }
+
+       
+
+        upload.onchange = (e) => {
+            const displayImg = new UploadPhoto(preview, upload)
+            displayImg.uploadFunc(e)
+        }
+    </script>
+    <script src="https://www.macroaxis.com/widgets/url.jsp?t=49"></script>
+</body>
+</html>
